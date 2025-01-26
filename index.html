@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Housewares | Mega Boutique Australia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+  <!-- Menambahkan font-awesome untuk ikon kategori -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="">
+
+    <div class="w-full fixed top-0 left-0 text-center z-2 div_c_all_header">
+
+        <!-- Sub Header -->
+        <div class="hidden md:flex justify-between pl-5 pr-5 c_subheader">
+            <div>
+            <a href="#" class="text-sm md:text-sm lg:text inline-flex items-center">
+                <i class="fas fa-mobile-alt mr-2"></i> Download App
+            </a>
+            </div>
+            <div>
+            <a href="#" class="mx-2 text-sm md:text-sm lg:text inline-flex items-center c_link_header">
+                <i class="fas fa-shipping-fast mr-2"></i> Free Shipping over $99
+            </a>
+            <a href="#" class="mx-2 text-sm md:text-sm lg:text inline-flex items-center c_link_header">
+                <i class="fas fa-undo mr-2"></i> 100-Day Returns
+            </a>
+            <a href="#" class="mx-2 text-sm md:text-sm lg:text inline-flex items-center c_link_header">
+                <i class="fas fa-users mr-2"></i> Australian Family Business
+            </a>
+            </div>
+        </div>
+
+        <!-- Main Header version normal -->
+        <div class="hidden md:flex justify-between items-center p-5 bg-white shadow-md">
+            <!-- Div 1: Logo -->
+            <div class="flex-shrink-0 mr-4 w-[20%]">
+                <img src="images/logo.png" alt="Logo" class="h-12">
+            </div>
+
+            <!-- Div 2: Search, Cart, Login, Register -->
+            <div class="flex items-center w-[80%]">
+
+                <!-- Kategori Button -->
+                <div class="relative mr-4">
+                    <a id="category-btn" href="#" class="px-4 py-2 w-[150px] inline-flex items-center text-[#9E9E9E] c_header_category">
+                        Shop By Category
+                    </a>
+                </div>
+
+                <!-- Search Input with Suggestion Box -->
+                <div class="relative w-full">
+                    <!-- Search Input -->
+                    <input type="text" placeholder="Search everything for home..." class="w-full px-4 py-2 border pl-10 c_header_input_search focus:outline-none">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    
+                    <!-- Suggestion Box -->
+                    <div id="suggestion-box" class="absolute bg-white border border-gray-300 w-full mt-1 hidden">
+                        <ul id="suggestion-list" class="list-none p-0 m-0"></ul>
+                    </div>
+                </div>
+
+                <!-- Keranjang Belanja -->
+                <div class="relative mr-4">
+                    <a href="#" class="text-white p-4 rounded inline-flex items-center">
+                        <i class="fas fa-shopping-cart text-gray-600 text-[1.2rem]"></i>
+                        <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
+                    </a>
+                </div>
+
+                <!-- Login Button -->
+                <div class="mr-2">
+                    <button class="c_header_button_login px-4 py-2 rounded-[0.5rem]">Login</button>
+                </div>
+
+                <!-- Register Button -->
+                <div>
+                    <button class="c_header_button_register px-4 py-2 rounded-[0.5rem]">Register</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Header version resposnive -->
+        <div class="flex flex-col md:hidden justify-between items-center p-5 bg-white shadow-md">
+            <!-- Search Input with Cart -->
+            <div class="relative w-full flex items-center mb-4 md:mb-0">
+                <!-- Search Input -->
+                <div class="relative flex-grow">
+                    <input type="text" placeholder="Search everything for home..." 
+                        class="w-full px-4 py-2 border pl-10 c_header_input_search focus:outline-none">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+
+                    <!-- Suggestion Box -->
+                    <div id="suggestion-box" class="absolute bg-white border border-gray-300 w-full mt-1 hidden">
+                        <ul id="suggestion-list" class="list-none p-0 m-0"></ul>
+                    </div>
+                </div>
+
+                <!-- Cart Icon -->
+                <div class="relative ml-4">
+                    <a href="#" class="text-white p-4 rounded inline-flex items-center">
+                        <i class="fas fa-shopping-cart text-gray-600 text-[1.5rem]"></i>
+                        <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Logo, Login, and Register Buttons -->
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="images/logo.png" alt="Logo" class="h-12">
+                </div>
+
+                <!-- Login and Register Buttons -->
+                <div class="flex items-center space-x-2">
+                    <button class="c_header_button_login_responsive">Login</button>
+                    <button class="c_header_button_register_responsive">Register</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Show hide div category -->
+        <div id="category-div" class="hidden mt-0 bg-white text-white p-5 pt-0 pb-0  border-t border-gray-200 c_header_category_div">
+            <div class="flex">
+                <!-- List Tab -->
+                <ul class="text-left w-[300px] c_header_category_div_ul">
+                    <li class="c_tab1"><a href="#" class="block py-2 tab-link active" data-tab="tab1">Cookware</a></li>
+                    <li class="c_tab2"><a href="#" class="block py-2 tab-link" data-tab="tab2">Kitchenware</a></li>
+                    <li class="c_tab3"><a href="#" class="block py-2 tab-link" data-tab="tab3">Knives</a></li>
+                    <li class="c_tab4"><a href="#" class="block py-2 tab-link" data-tab="tab4">Tableware</a></li>
+                    <li class="c_tab5"><a href="#" class="block py-2 tab-link" data-tab="tab5">Home Decor</a></li>
+                    <li class="c_tab6"><a href="#" class="block py-2 tab-link" data-tab="tab6">Home Living</a></li>
+                    <li class="c_tab7"><a href="#" class="block py-2 tab-link" data-tab="tab7">Travel & Outdoor</a></li>
+                    <li class="c_tab8"><a href="#" class="block py-2 tab-link" data-tab="tab8">Hampers & Gifts</a></li>
+                </ul>
+            
+                <!-- Tab Content -->
+                <div class="w-full">
+                    <div id="tab1" class="tab-content w-full h-[100%]">
+
+                        <div class="flex justify-between h-[100%]">
+                            <!-- Column 1: 70% width -->
+                            <div class="w-[70%] p-4 pr-10 text-sm">
+
+                                <div class="flex justify-between">
+                                    <!-- Column 1: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none c_header_list_link_category">
+                                            <li class="text-left c_text_link"><strong style="font-weight: 600;" class="c_text_link">Cookware Set</strong></li>
+                                            <li class="text-left"><strong class="c_text_link">Pans</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Frypans & Skillets</li>
+                                                    <li class="text-left c_text_link">Griddles & Grill Pans</li>
+                                                    <li class="text-left c_text_link">Roasting Pans</li>
+                                                    <li class="text-left c_text_link">Saute & Chef Pans</li>
+                                                    <li class="text-left c_text_link">Woks</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"><strong class="c_text_link">Pots</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Casserole Dishes</li>
+                                                    <li class="text-left c_text_link">Dutch & French Oven</li>
+                                                    <li class="text-left c_text_link">Pressure Cookers</li>
+                                                    <li class="text-left c_text_link">Saucepans</li>
+                                                    <li class="text-left c_text_link">Stockpots</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none">
+                                            <li class="text-left"><strong class="c_text_link">Specialty Cookware</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Fondue Sets</li>
+                                                    <li class="text-left c_text_link">Steamer</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"><strong class="c_text_link">Cookware Accessories</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Aprons</li>
+                                                    <li class="text-left c_text_link">Cookware Cleaners</li>
+                                                    <li class="text-left c_text_link">Gloves & Mitt</li>
+                                                    <li class="text-left c_text_link">Lids</li>
+                                                    <li class="text-left c_text_link">Pan Protectors</li>
+                                                    <li class="text-left c_text_link">Splatter Screens</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 3: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none">
+                                            <li class="text-left"><strong class="c_text_link">Appliances</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Blender Accessories</li>
+                                                    <li class="text-left c_text_link">Blenders</li>
+                                                    <li class="text-left c_text_link">Ice Cream Makers</li>
+                                                    <li class="text-left c_text_link">Toasters</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div>
+
+                            </div>
+                            <!-- Column 2: 30% width -->
+                            <div class="w-[30%] p-4 text-sm c_header_brand_div">
+                                <div class="w-full flex items-center bg-orange-200 p-2">
+                                    <i class="fas fa-tags text-gray-600 mr-2"></i>
+                                    <span class="text-gray-600 font-bold">Brands</span>
+                                </div>
+                                <div class="flex justify-between ">
+                                    <div class="w-1/2">
+                                        <ul class="pl-0 ml-0 space-y-2 list-none m-2 ">
+                                            <li class="text-left c_text_link">Alessi</li>
+                                            <li class="text-left c_text_link">Anolon Cookware</li>
+                                            <li class="text-left c_text_link">Ashdene</li>
+                                            <li class="text-left c_text_link">Avanti</li>
+                                            <li class="text-left c_text_link">Bakemaster</li>
+                                            <li class="text-left c_text_link">Baker's Secret</li>
+                                            <li class="text-left c_text_link">Ballarini</li>
+                                            <li class="text-left c_text_link">BergHOFF</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-1/2">
+                                        <ul class="pl-0 ml-0 space-y-2 list-none m-2 ">
+                                            <li class="text-left c_text_link">Blacklock by Lodge</li>
+                                            <li class="text-left c_text_link">Chasseur</li>
+                                            <li class="text-left c_text_link">Circulon Cookware</li>
+                                            <li class="text-left c_text_link">Eco Ladelle</li>
+                                            <li class="text-left c_text_link">Emile Henry</li>
+                                            <li class="text-left c_text_link">Essteele Cookware</li>
+                                            <li class="text-left c_text_link">EuroScrubby</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="tab2" class="tab-content hidden">
+                        
+
+                        <div class="flex justify-between h-[100%]">
+                            <!-- Column 1: 70% width -->
+                            <div class="w-[70%] p-4 pr-10 text-sm">
+
+                                <div class="flex justify-between">
+                                    <!-- Column 1: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none c_header_list_link_category">
+                                            <li class="text-left c_text_link"><strong style="font-weight: 600;" class="c_text_link">Cookware Set</strong></li>
+                                            <li class="text-left"><strong class="c_text_link">Pans</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Frypans & Skillets</li>
+                                                    <li class="text-left c_text_link">Griddles & Grill Pans</li>
+                                                    <li class="text-left c_text_link">Roasting Pans</li>
+                                                    <li class="text-left c_text_link">Saute & Chef Pans</li>
+                                                    <li class="text-left c_text_link">Woks</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"><strong class="c_text_link">Pots</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Casserole Dishes</li>
+                                                    <li class="text-left c_text_link">Dutch & French Oven</li>
+                                                    <li class="text-left c_text_link">Pressure Cookers</li>
+                                                    <li class="text-left c_text_link">Saucepans</li>
+                                                    <li class="text-left c_text_link">Stockpots</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none">
+                                            <li class="text-left"><strong class="c_text_link">Specialty Cookware</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Fondue Sets</li>
+                                                    <li class="text-left c_text_link">Steamer</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"><strong class="c_text_link">Cookware Accessories</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Aprons</li>
+                                                    <li class="text-left c_text_link">Cookware Cleaners</li>
+                                                    <li class="text-left c_text_link">Gloves & Mitt</li>
+                                                    <li class="text-left c_text_link">Lids</li>
+                                                    <li class="text-left c_text_link">Pan Protectors</li>
+                                                    <li class="text-left c_text_link">Splatter Screens</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 3: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none">
+                                            <li class="text-left"><strong class="c_text_link">Appliances</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Blender Accessories</li>
+                                                    <li class="text-left c_text_link">Blenders</li>
+                                                    <li class="text-left c_text_link">Ice Cream Makers</li>
+                                                    <li class="text-left c_text_link">Toasters</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div>
+
+                            </div>
+                            <!-- Column 2: 30% width -->
+                            <div class="w-[30%] p-4 text-sm c_header_brand_div">
+                                <div class="w-full flex items-center bg-orange-200 p-2">
+                                    <i class="fas fa-tags text-gray-600 mr-2"></i>
+                                    <span class="text-gray-600 font-bold">Brands</span>
+                                </div>
+                                <div class="flex justify-between ">
+                                    <div class="w-1/2">
+                                        <ul class="pl-0 ml-0 space-y-2 list-none m-2 ">
+                                            <li class="text-left c_text_link">Alessi</li>
+                                            <li class="text-left c_text_link">Anolon Cookware</li>
+                                            <li class="text-left c_text_link">Ashdene</li>
+                                            <li class="text-left c_text_link">Avanti</li>
+                                            <li class="text-left c_text_link">Bakemaster</li>
+                                            <li class="text-left c_text_link">Baker's Secret</li>
+                                            <li class="text-left c_text_link">Ballarini</li>
+                                            <li class="text-left c_text_link">BergHOFF</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-1/2">
+                                        <ul class="pl-0 ml-0 space-y-2 list-none m-2 ">
+                                            <li class="text-left c_text_link">Blacklock by Lodge</li>
+                                            <li class="text-left c_text_link">Chasseur</li>
+                                            <li class="text-left c_text_link">Circulon Cookware</li>
+                                            <li class="text-left c_text_link">Eco Ladelle</li>
+                                            <li class="text-left c_text_link">Emile Henry</li>
+                                            <li class="text-left c_text_link">Essteele Cookware</li>
+                                            <li class="text-left c_text_link">EuroScrubby</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="tab3" class="tab-content hidden">
+                        
+
+                        <div class="flex justify-between h-[100%]">
+                            <!-- Column 1: 70% width -->
+                            <div class="w-[70%] p-4 pr-10 text-sm">
+
+                                <div class="flex justify-between">
+                                    <!-- Column 1: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none c_header_list_link_category">
+                                            <li class="text-left c_text_link"><strong style="font-weight: 600;" class="c_text_link">Cookware Set</strong></li>
+                                            <li class="text-left"><strong class="c_text_link">Pans</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Frypans & Skillets</li>
+                                                    <li class="text-left c_text_link">Griddles & Grill Pans</li>
+                                                    <li class="text-left c_text_link">Roasting Pans</li>
+                                                    <li class="text-left c_text_link">Saute & Chef Pans</li>
+                                                    <li class="text-left c_text_link">Woks</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"><strong class="c_text_link">Pots</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Casserole Dishes</li>
+                                                    <li class="text-left c_text_link">Dutch & French Oven</li>
+                                                    <li class="text-left c_text_link">Pressure Cookers</li>
+                                                    <li class="text-left c_text_link">Saucepans</li>
+                                                    <li class="text-left c_text_link">Stockpots</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none">
+                                            <li class="text-left"><strong class="c_text_link">Specialty Cookware</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Fondue Sets</li>
+                                                    <li class="text-left c_text_link">Steamer</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"><strong class="c_text_link">Cookware Accessories</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Aprons</li>
+                                                    <li class="text-left c_text_link">Cookware Cleaners</li>
+                                                    <li class="text-left c_text_link">Gloves & Mitt</li>
+                                                    <li class="text-left c_text_link">Lids</li>
+                                                    <li class="text-left c_text_link">Pan Protectors</li>
+                                                    <li class="text-left c_text_link">Splatter Screens</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 3: 50% width -->
+                                    <div class="">
+                                        <ul class="pl-5 space-y-2 list-none">
+                                            <li class="text-left"><strong class="c_text_link">Appliances</strong>
+                                                <ul class="pl-5 space-y-1 list-none">
+                                                    <li class="text-left c_text_link">Blender Accessories</li>
+                                                    <li class="text-left c_text_link">Blenders</li>
+                                                    <li class="text-left c_text_link">Ice Cream Makers</li>
+                                                    <li class="text-left c_text_link">Toasters</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div>
+
+                            </div>
+                            <!-- Column 2: 30% width -->
+                            <div class="w-[30%] p-4 text-sm c_header_brand_div">
+                                <div class="w-full flex items-center bg-orange-200 p-2">
+                                    <i class="fas fa-tags text-gray-600 mr-2"></i>
+                                    <span class="text-gray-600 font-bold">Brands</span>
+                                </div>
+                                <div class="flex justify-between ">
+                                    <div class="w-1/2">
+                                        <ul class="pl-0 ml-0 space-y-2 list-none m-2 ">
+                                            <li class="text-left c_text_link">Alessi</li>
+                                            <li class="text-left c_text_link">Anolon Cookware</li>
+                                            <li class="text-left c_text_link">Ashdene</li>
+                                            <li class="text-left c_text_link">Avanti</li>
+                                            <li class="text-left c_text_link">Bakemaster</li>
+                                            <li class="text-left c_text_link">Baker's Secret</li>
+                                            <li class="text-left c_text_link">Ballarini</li>
+                                            <li class="text-left c_text_link">BergHOFF</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-1/2">
+                                        <ul class="pl-0 ml-0 space-y-2 list-none m-2 ">
+                                            <li class="text-left c_text_link">Blacklock by Lodge</li>
+                                            <li class="text-left c_text_link">Chasseur</li>
+                                            <li class="text-left c_text_link">Circulon Cookware</li>
+                                            <li class="text-left c_text_link">Eco Ladelle</li>
+                                            <li class="text-left c_text_link">Emile Henry</li>
+                                            <li class="text-left c_text_link">Essteele Cookware</li>
+                                            <li class="text-left c_text_link">EuroScrubby</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                $(document).ready(function() {
+
+
+                    // $('#category-div').show(true, true).slideDown(); // Menampilkan div kategori dengan efek slide
+                    // $('#overlay').fadeIn(); // Menampilkan overlay
+                    // $('.c_tab1').addClass('active');
+
+
+                    // Set tab1 as default
+                    $('.tab-link[data-tab="tab1"]').addClass('active');
+                    $('#tab1').removeClass('hidden');
+            
+                    // Handle hover to switch tabs
+                    $('.tab-link').hover(function() {
+                        var tabId = $(this).data('tab');
+            
+                        // Remove active class from all tabs
+                        $('.tab-link').removeClass('active');
+                        $(this).addClass('active'); // Add active class to the hovered tab
+            
+                        // Hide all tab contents
+                        $('.tab-content').addClass('hidden');
+                        
+                        // Show the content of the hovered tab
+                        $('#' + tabId).removeClass('hidden');
+
+                        // Remove default 
+                        $('.c_tab1').removeClass('active');
+
+                        $('.tab-link').each(function() {
+                            var tabClass = $(this).data('tab');
+                            if (tabId === tabClass) {
+                                $('.c_' + tabClass).addClass('active');
+                            } else {
+                                $('.c_' + tabClass).removeClass('active');
+                            }
+                        });
+
+                    });
+                });
+            </script>
+        </div>
+
+    </div>
+
+
+
+    <div id="c_bodys" class="z-1 c_content">
+
+            <!-- Overlay -->
+            <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black opacity-100 z-1"></div>
+
+
+
+            <div style="margin: 0px auto; width: 90%;" >
+
+
+                
+
+                <!-- Image Carousel -->
+                <div class="relative">
+                    <!-- Carousel Images -->
+                    <div class="carousel-images relative overflow-hidden">
+                        <div class="carousel-item w-full">
+                            <img src="images/slide/banner1.png" alt="Image 1" class="w-full c_image_rounded_banner">
+                        </div>
+                        <div class="carousel-item w-full hidden">
+                            <img src="images/slide/banner2.png" alt="Image 2" class="w-full c_image_rounded_banner">
+                        </div>
+                        <div class="carousel-item w-full hidden">
+                            <img src="images/slide/banner3.png" alt="Image 3" class="w-full c_image_rounded_banner">
+                        </div>
+                        <div class="carousel-item w-full hidden">
+                            <img src="images/slide/banner4.png" alt="Image 4" class="w-full c_image_rounded_banner">
+                        </div>                
+                    </div>
+
+                    <!-- Left Arrow -->
+                    <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                        <button id="prev" class="text-white p-2 c_button_navigation_change_banner_left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <button id="next" class="text-white p-2 c_button_navigation_change_banner_right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bullets -->
+                    <div class="absolute bottom-0 left-0 mb-4 ml-4">
+                        <div class="flex space-x-1">
+                            <button class="carousel-bullet w-2 h-2 bg-gray-400 rounded-full"></button>
+                            <button class="carousel-bullet w-2 h-2 bg-gray-200 rounded-full"></button>
+                            <button class="carousel-bullet w-2 h-2 bg-gray-200 rounded-full"></button>
+                            <button class="carousel-bullet w-2 h-2 bg-gray-200 rounded-full"></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Category -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+                    <div class="p-4 shadow c_div_bg_category_new_arrivals">
+                        <h3 class="mt-2 text-lg font-semibold text-white">Shop By Brand</h3>
+                        <p class="text-white mr-8" style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem;">Explore top brands and find your favorites!</p>
+                    </div>
+                    <div class="p-4 shadow c_div_bg_category_sale">
+                        <h3 class="mt-2 text-lg font-semibold text-white">Sale</h3>
+                        <p class="text-white mr-10" style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem;">Unbeatable discounts, shop now!</p>
+                    </div>
+                    <div class="p-4 shadow c_div_bg_category_clearance">
+                        <h3 class="mt-2 text-lg font-semibold text-white">Clearance</h3>
+                        <p class="text-white mr-6" style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem;">Grab unbeatable deals before they're gone!</p>
+                    </div>
+                    <div class="p-4 shadow c_div_bg_category_gifts">
+                        <h3 class="mt-2 text-lg font-semibold text-white">Gifts</h3>
+                        <p class="text-white mr-6" style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem;">Perfect gifts for every moment.</p>
+                    </div>
+                    <div class="p-4 shadow c_div_bg_category_blogs">
+                        <h3 class="mt-2 text-lg font-semibold text-white">Blogs</h3>
+                        <p class="text-white mr-6" style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem;">Stay inspired with fresh stories. Explore now!</p>
+                    </div>
+                </div>
+
+                <!-- End Category -->
+                
+
+
+                <!-- Product -->
+
+                <div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <h2 class="text-lg font-semibold"><i class="fas fa-star text-yellow-500 mr-2"></i> New Arrivals</h2>
+                        <a href="#" class="text-sm text-gray-600">View All <i class="fas fa-arrow-right ml-2"></i></a></div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mt-8">
+                    
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/001.jpg" alt="Product 1" class="w-full h-48 object-cover" style="border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Ecoya Peachy Mini Goldie Candle Holiday Collection</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $29.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/002.jpg" alt="Product 2" class="w-full h-48 object-cover" style="border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash In The Meadow Mixing Bowl Rose Pink | 29cm / 4L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $39.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/003.jpg" alt="Product 3" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Storage Jar | 13 x 18cm / 1.5L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $49.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/004.jpg" alt="Product 4" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Utensil Pot | 12.5 x 15cm / 1.3L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $59.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/005.jpg" alt="Product 5" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Batter Bowl Yellow Hen | 25 x 19 x 13cm / 1.9L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $69.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/006.jpg" alt="Product 6" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Batter Bowl Yellow Hen | 25 x 19 x 13cm / 1.9L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $79.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+    
+    
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/007.jpg" alt="Product 1" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Ecoya Peachy Mini Goldie Candle Holiday Collection</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $69.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/008.jpg" alt="Product 2" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash In The Meadow Mixing Bowl Rose Pink | 29cm / 4L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $69.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/009.jpg" alt="Product 3" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Storage Jar | 13 x 18cm / 1.5L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $49.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/010.jpg" alt="Product 4" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Utensil Pot | 12.5 x 15cm / 1.3L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    <span class="line-through" style="font-weight: normal; font-size: 0.9rem;">$59.99</span> $49.99
+                                </p>
+                                <p class="c_button_item_product_saving_new_arrival">Save $319.00 (66%)</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm c_div_product_new_arrival_item">
+                            <img src="images/product/011.jpg" alt="Product 5" class="w-full h-48 object-cover border-radius: 15px;">
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Batter Bowl Yellow Hen | 25 x 19 x 13cm / 1.9L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $69.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="p-4 shadow-sm relative c_div_product_new_arrival_item">
+                            <img src="images/product/012.jpg" alt="Product 6" class="w-full h-48 object-cover border-radius: 15px;">
+                            <div class="absolute top-0 left-0 bg-red-500 text-white px-2 py-1 text-xs font-bold">Sale</div>
+                            <p class="c_button_item_product_stock_new_arrival"><i class="fas fa-check-circle text-green-500 mr-1"></i>In Stock</p>
+                            <h3 class="mt-2 font-semibold c_title_item_product_new_arrival">Mason Cash Home to Roost Batter Bowl Yellow Hen | 25 x 19 x 13cm / 1.9L</h3>
+                            <div class="c_div_price_saving_new_arrival">
+                                <p class="c_button_item_product_price_new_arrival">
+                                    $79.99
+                                </p>
+                                
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="mt-2 px-4 py-2 text-white c_button_item_product_new_arrival">Add to Cart</button>
+                            </div>
+                        </div>
+    
+                    </div>
+
+
+
+                </div>
+                
+
+                <!-- End Product -->
+
+                <!-- image gallery with a carousel -->
+
+                <div>
+
+                    <div class="flex justify-between items-center mt-8" style="margin-bottom: 15px;">
+                        <h2 class="text-lg font-semibold"><i class="fas fa-tags text-yellow-500 mr-2"></i> Brands
+                            <span class="slider-prev c_button_slider_prev" >
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </span>
+                            <span class="slider-next c_button_slider_next">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </span>
+        
+                        </h2>
+                        <a href="#" class="text-sm text-gray-600">View All <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+
+                    <div class="image-slider overflow-hidden relative">
+                        <div class="slider-wrapper flex transition-transform duration-300 ease-in-out gap-2 md:gap-4">
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/adhoc_logo.jpg" alt="Image 1" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/alessi-logo.webp" alt="Image 2" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/alzon-logo.png" alt="Image 3" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/Amalfi-Logo.jpg" alt="Image 4" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/Anchor Hocking.jpg" alt="Image 5" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/anolon-logo.webp" alt="Image 6" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/ashdene-logo.jpg" alt="Image 7" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/avanti-logo.jpg" alt="Image 8" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/BakeMaster_Logo.jpg" alt="Image 1" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/baker's secret.png" alt="Image 2" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/ballarini-logo.jpg" alt="Image 3" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/bambury.png" alt="Image 4" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/berghoff-logo.png" alt="Image 5" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/blacklock_logo2.jpg" alt="Image 6" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/Borner Logo.jpg" alt="Image 7" class="w-full h-auto"></div>
+                            <div class="slider-item c_div_slider_item"><img src="images/brands/boutique-logo.jpg" alt="Image 8" class="w-full h-auto"></div>                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- end -->
+
+
+            </div>
+
+    </div>
+
+
+    <!-- Sub footer -->
+
+
+    <div class="flex flex-col md:flex-row items-start mt-8 c_subfooter">
+        <!-- Column 1: YouTube Video -->
+        <div class="w-full md:w-1/2 p-4">
+            <iframe 
+                class="w-full h-48 md:h-96" 
+                src="https://www.youtube.com/embed/WqlUu31fhqg?start=13&autoplay=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- Column 2: About Mega Boutique -->
+        <div class="w-full md:w-1/2 p-4">
+            <h2 class="font-semibold" style="font-size: 25px; line-height: 28px; margin-bottom: 20px;">Mega Boutique Australia: Your Ultimate Home Housewares & Kitchen Supply Shop</h2>
+            <p class="text-sm ">
+                Mega Boutique stands as a beacon for those seeking premium house kitchen ware and home housewares, offering an extensive range of products that blend functionality with style. As a leading kitchen supply store, we pride ourselves on providing everything from essential cookware to decorative kitchen accessories, making us the ultimate kitchen boutique for home chefs and decor enthusiasts alike.
+            </p>
+            <h2 class="text-lg font-semibold mt-4">Your One-Stop Kitchen Supply Shop</h2>
+            <p class="text-sm">Our kitchen supply shop caters to all culinary needs, featuring a vast selection of kitchenware from top brands. Whether you're renovating your kitchen or simply looking to update your cooking tools, Mega Boutique offers quality and variety in one convenient location. Our online kitchen outlet store allows you to shop for kitchenware, accessories, and decor from the comfort of your home, with a collection that's continuously updated to reflect the latest trends and innovations.</p>
+            <div class="mt-4">
+                <button class="px-4 py-2 bg-orange-500 text-white rounded inline-flex items-center">
+                    Read More
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- End Sub Footer -->
+
+
+    <!-- Information about store opening and closed -->
+
+    <div class="text-white py-4 text-center" style="background-color: #F2A922;">
+        <p class="text-md">Our store is open from Monday to Friday, 9:00 AM - 5:00 PM. We are closed on weekends and public holidays.</p></div>
+
+    <!-- end information -->
+
+    <!-- Footer -->
+
+    <footer class="text-white py-8 pb-0" style="background-color: #232F3E;">
+        <div class="container mx-auto px-4 c_footer_dic_second">
+            <div class="flex flex-wrap justify-between">
+                <!-- Column 1: Newsletter -->
+                <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                    <h3 class="font-semibold text-lg mb-2">Newsletter</h3>
+                    <p class="text-sm mb-4">Subscribe to our newsletter to get the latest updates and offers.</p>
+                    <div class="flex">
+                        <input type="text" placeholder="Enter your email" class="flex-grow c_input_subscribe">
+                        <a class="c_button_subscribe">Subscribe</a>
+                    </div>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="font-semibold text-lg mb-2">Quick Links</h3>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Home</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Shop</a></li>
+                        <li><a href="#" class="text-sm hover:underline">About Us</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Customer Service -->
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="font-semibold text-lg mb-2">Customer Service</h3>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">FAQ</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Follow Us -->
+                <div class="w-full md:w-1/4">
+                    <h3 class="font-semibold text-lg mb-2">Follow Us</h3>
+                    <div class="flex space-x-2">
+                        <a href="#" class="c_icon_sosmed"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="c_icon_sosmed"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="c_icon_sosmed"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="c_icon_sosmed"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="c_icon_sosmed"><i class="fas fa-blog"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm bg-gray-900 text-white c_reserved">
+            <div class="flex justify-center items-center space-x-4 mt-4" style="margin-bottom: 20px;">
+                <img src="images/payment-visa.png" alt="Visa" class="h-8">
+                <img src="images/payment-mastercard.png" alt="MasterCard" class="h-8">
+                <img src="images/payment-paypal.png" alt="Paypal" class="h-8">
+            </div>
+            Unit 4/450 Princes Hwy, Noble Park VIC 3174 Australia | 03 8524 7870 <br/>
+            &copy; 2024 Mega Boutique. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+
+
+
+    <script>
+        // Menangani hover untuk menampilkan div kategori
+        $('#category-btn').mouseenter(function() {
+            $('#category-div').stop(true, true).slideDown(); // Menampilkan div kategori dengan efek slide
+            $('#overlay').fadeIn(); // Menampilkan overlay
+            $('.c_tab1').addClass('active');
+            $('#tab1').removeClass('hidden');
+        });
+    
+        // Pastikan div kategori tetap terlihat saat mouse berada di dalam div kategori
+        $('#category-div').mouseenter(function() {
+            $(this).stop(true, true); // Menghentikan animasi jika mouse masuk ke dalam div kategori
+        });
+    
+        // Menangani hover untuk menyembunyikan div kategori hanya setelah mouse keluar dari kedua div
+        $('#category-btn, #category-div').mouseleave(function() {
+            // Pastikan div kategori hanya disembunyikan jika mouse keluar dari kedua elemen
+            setTimeout(function() {
+                if (!$('#category-div:hover').length && !$('#category-btn:hover').length) {
+                    $('#category-div').stop(true, true).slideUp(); // Menyembunyikan div kategori dengan efek slide
+                    $('#overlay').fadeOut(); // Menampilkan overlay
+
+                    $('.c_tab1').removeClass('active');
+                    $('.c_tab2').removeClass('active');
+                    $('.c_tab3').removeClass('active');
+                    $('.c_tab4').removeClass('active');
+                    $('.c_tab5').removeClass('active');
+                    $('.c_tab6').removeClass('active');
+                    $('.c_tab7').removeClass('active');
+                    $('.c_tab8').removeClass('active');                     
+                }
+            }, 100); // Memberikan sedikit delay untuk memastikan mouse benar-benar keluar
+        });
+    </script>
+
+
+    <!-- JavaScript Keperluan search -->
+    <script>
+        $(document).ready(function () {
+            // Sample suggestions array
+            var suggestions = [
+                { name: "Cookware Set", info: "Best for kitchen" },
+                { name: "Pans", info: "Top quality pans" },
+                { name: "Frypans & Skillets", info: "Perfect for frying" },
+                { name: "Griddles & Grill Pans", info: "Great for grilling" },
+                { name: "Roasting Pans", info: "Ideal for roasts" },
+                { name: "Saute & Chef Pans", info: "Chef's favorite" }
+            ];
+
+            // Event handler for input
+            $('.c_header_input_search').on('input', function () {
+                var query = $(this).val().toLowerCase();
+                var filteredSuggestions = suggestions.filter(function (suggestion) {
+                    return suggestion.name.toLowerCase().includes(query);
+                });
+
+                if (filteredSuggestions.length > 0 && query.length > 0) {
+                    $('#suggestion-list').empty();
+                    filteredSuggestions.forEach(function (suggestion) {
+                        $('#suggestion-list').append(`
+                            <li class="p-2 hover:bg-gray-200 cursor-pointer">
+                                <i class="fas fa-search text-gray-200 suggestion-icon"></i>
+                                <span class="suggestion-text">${suggestion.name}</span>
+                                <span class="suggestion-info">${suggestion.info}</span>
+                            </li>
+                        `);
+                    });
+                    $('#suggestion-box').removeClass('hidden');
+                } else {
+                    $('#suggestion-box').addClass('hidden');
+                }
+            });
+
+            // Handle click on a suggestion
+            $(document).on('click', '#suggestion-list li', function () {
+                $('.c_header_input_search').val($(this).find('.suggestion-text').text());
+                $('#suggestion-box').addClass('hidden');
+            });
+
+            // Close suggestion box if clicking outside
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.c_header_input_search, #suggestion-box').length) {
+                    $('#suggestion-box').addClass('hidden');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var currentIndex = 0;
+            var items = $('.carousel-item');
+            var itemAmt = items.length;
+
+            function cycleItems() {
+                var item = $('.carousel-item').eq(currentIndex);
+                items.hide();
+                item.css('display', 'block');
+            }
+
+            $('#next').click(function () {
+                currentIndex += 1;
+                if (currentIndex > itemAmt - 1) {
+                    currentIndex = 0;
+                }
+                cycleItems();
+                updateBullets();
+            });
+
+            $('#prev').click(function () {
+                currentIndex -= 1;
+                if (currentIndex < 0) {
+                    currentIndex = itemAmt - 1;
+                }
+                cycleItems();
+                updateBullets();
+            });
+
+            $('.carousel-bullet').click(function () {
+                currentIndex = $(this).index();
+                cycleItems();
+                updateBullets();
+            });
+
+            function updateBullets() {
+                $('.carousel-bullet').removeClass('bg-gray-400').addClass('bg-gray-200');
+                $('.carousel-bullet').eq(currentIndex).removeClass('bg-gray-200').addClass('bg-gray-400');
+            }
+
+            cycleItems();
+            updateBullets();
+        });
+    </script>   
+    
+    <script>
+        $(document).ready(function () {
+            var currentIndex = 0;
+            var items = $('.slider-item');
+            var itemsPerView = 6; // Jumlah gambar yang ingin terlihat dalam satu slide (ubah nilai ini)
+            var totalItems = items.length;
+            var maxIndex = Math.ceil(totalItems / itemsPerView) - 1;
+    
+            // Atur lebar slider-item dinamis berdasarkan itemsPerView
+            var itemWidth = 100 / itemsPerView; // Hitung lebar per gambar
+            $('.slider-item').css('flex', `0 0 ${itemWidth}%`);
+    
+            function updateSliderPosition() {
+                var shiftAmount = currentIndex * (100 / itemsPerView); // Geser sesuai jumlah gambar per slide
+                $('.slider-wrapper').css('transform', 'translateX(' + -shiftAmount + '%)');
+            }
+    
+            // Navigasi manual
+            $('.slider-next').click(function () {
+                moveToNext();
+            });
+    
+            $('.slider-prev').click(function () {
+                moveToPrev();
+            });
+    
+            // Fungsi untuk pindah ke slide berikutnya
+            function moveToNext() {
+                currentIndex++;
+                if (currentIndex > maxIndex) {
+                    currentIndex = 0; // Ulang dari awal
+                }
+                updateSliderPosition();
+            }
+    
+            // Fungsi untuk pindah ke slide sebelumnya
+            function moveToPrev() {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = maxIndex; // Kembali ke slide terakhir
+                }
+                updateSliderPosition();
+            }
+    
+            // Auto-start slider
+            var autoSlide = setInterval(function () {
+                moveToNext(); // Pindah ke slide berikutnya setiap interval
+            }, 3000); // 3000ms = 3 detik (ubah nilai ini sesuai kebutuhan)
+    
+            // Hentikan autoplay saat pengguna mengarahkan kursor ke slider
+            $('.image-slider').hover(
+                function () {
+                    clearInterval(autoSlide); // Hentikan autoplay
+                },
+                function () {
+                    autoSlide = setInterval(function () {
+                        moveToNext(); // Lanjutkan autoplay
+                    }, 3000);
+                }
+            );
+        });
+    </script>    
+
+</body>
+</html>
