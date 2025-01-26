@@ -1,0 +1,568 @@
+/*  Default styles for the theme */
+
+body{
+    font-family: 'Pontano Sans', sans-serif;
+    /* font-family: 'Open Sauce One', sans-serif; */
+    /* font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0; */
+}
+
+.c_link_header{
+    font-weight: 600;
+}
+
+.c_link_header:hover{
+    color: #F65900;
+}
+
+.c_subheader{
+    background-color: #EDEDED;
+    padding: 0.5rem;
+    color: #746F72;
+}
+
+.c_header_input_search{
+    border-radius: 0.5rem;
+}
+
+.c_header_input_search:focus{
+    border-color: #F65900;
+}
+
+.c_header_button_register{
+    background-color: #F65900;
+    color: #FFFFFF;
+    margin-left: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.c_header_button_login{
+    background-color: #FFFFFF;
+    color: #F65900;
+    border: 1px solid #F65900;
+    font-size: 0.9rem;
+    margin-left: 0.2rem;
+}
+
+.c_header_button_login_responsive{
+    background-color: #FFFFFF;
+    color: #F65900;
+    border: 1px solid #F65900;
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.c_header_button_register_responsive{
+    background-color: #F65900;
+    color: #FFFFFF;    
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.c_header_category{
+    font-size: 0.9rem;
+}
+
+.c_header_category_div{
+    color: #746F72 !important;
+}
+
+.c_header_category_div_ul{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.c_header_category_div_ul li {
+    list-style-type: none;
+    display: block;
+    /* border-right: none; */
+    border-right: 1px solid #EDEDED;
+    /* background-color: #F65900; */
+    width: 100%;
+    padding: 0.2rem;
+    padding-right: 4rem;
+
+}
+
+
+.c_header_category_div_ul li:hover{
+    /* background-color: #EDEDED; */
+    width: 100%;
+    display: block;
+    color: #F17228;
+    border-right: 1px solid #F17228;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.c_header_category_div_ul li.active{
+    /* background-color: #EDEDED; */
+    width: 100%;
+    display: block;
+    color: #F17228;
+    border-right: 1px solid #F17228;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.top1{
+    background-color: #EDEDED;
+    color: #6D7588;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.c_content{
+    /* background-color: aquamarine; */
+    z-index: 1;
+}
+
+.div_c_all_header{
+    z-index: 10;
+}
+
+
+/* Menambahkan styling untuk overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0; /* Letakkan di atas halaman */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna semi-transparan */
+    z-index: 100; /* Pastikan overlay muncul di atas konten */
+  }
+  
+  /* Jika perlu, pastikan bodys memiliki z-index yang lebih rendah atau tidak ditentukan */
+  #c_bodys {
+    position: relative; 
+    /* Untuk memastikan stacking order */
+    z-index: 1; /* Secara default lebih rendah dari overlay */
+    margin-top: 160px;
+  }
+
+
+  .c_header_brand_div{
+    border-left: 1px solid #EDEDED;
+    /* background-color: #F65900; */
+    width: 100%;
+    padding: 0.2rem;
+    padding-left: 4rem;
+  }
+
+
+  .c_text_link:hover{
+    cursor: pointer;
+    color: #F17228;
+  }
+
+
+  /* Search Input */
+
+  #suggestion-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+#suggestion-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    padding-left: 10px !important;
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 1rem;
+}
+
+#suggestion-list li:hover {
+    background-color: #f3f4f6;
+}
+
+.suggestion-icon {
+    margin-right: 0.9rem;
+    font-size: 1rem;
+    color: #6b7280; /* Gray color */
+}
+
+.suggestion-text {
+    flex: 1;
+    text-align: left;
+}
+
+.suggestion-info {
+    font-size: 0.8rem;
+    color: #9ca3af; /* Light gray */
+}
+
+/* End Search Input */
+
+
+
+/* Image rounded */
+
+.c_image_rounded_banner{
+    border-radius: 15px;
+}
+
+.c_button_navigation_change_banner_left{
+    border-radius: 50%;
+    width: 40px;
+    position: relative;
+    left: -15px;
+    background-color: #FFB20E;
+    border-color: #FAAA01;
+}
+
+.c_button_navigation_change_banner_right{
+    border-radius: 50%;
+    width: 40px;
+    position: relative;
+    right: -15px;
+    background-color: #FFB20E;
+    border-color: #FAAA01;
+}
+
+
+
+.c_div_bg_category_new_arrivals{
+    background: linear-gradient(to left, #8E2DE2, #4A00E0); /* Gradient from right to left */
+    border-radius: 15px;
+    height: 120px;
+    position: relative;
+}
+
+.c_div_bg_category_new_arrivals::after {
+    content: "\f06a"; /* Unicode for the tag icon in FontAwesome */
+    font-family: 'Font Awesome 5 Free'; /* Ensure you have included FontAwesome in your project */
+    font-weight: 900; /* FontAwesome solid weight */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust the size as needed */
+    color: white; /* Adjust the color as needed */
+}
+
+.c_div_bg_category_sale{
+    background: linear-gradient(to left, #008000, #006400); /* Darker gradient from right to left */
+    border-radius: 15px;
+    height: 120px;
+    position: relative;
+}
+
+.c_div_bg_category_sale::after {
+    content: "\f295"; /* Unicode for the discount icon in FontAwesome */
+    font-family: 'Font Awesome 5 Free'; /* Ensure you have included FontAwesome in your project */
+    font-weight: 900; /* FontAwesome solid weight */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust the size as needed */
+    color: white; /* Adjust the color as needed */
+}
+
+.c_div_bg_category_clearance{
+    background: linear-gradient(to left, #FF512F, #DD2476); /* Gradient from right to left */
+    border-radius: 15px;
+    height: 120px;
+    position: relative;
+}
+
+.c_div_bg_category_clearance::after {
+    content: "\f0f3"; /* Unicode for the bell icon in FontAwesome */
+    font-family: 'Font Awesome 5 Free'; /* Ensure you have included FontAwesome in your project */
+    font-weight: 900; /* FontAwesome solid weight */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust the size as needed */
+    color: white; /* Adjust the color as needed */
+}
+
+.c_div_bg_category_gifts{
+    background: linear-gradient(to left, #F83600, #FF8E00);
+    border-radius: 15px;
+    height: 120px;
+    position: relative;
+}
+
+.c_div_bg_category_gifts::after {
+    content: "\f06b"; /* Unicode for the gift icon in FontAwesome */
+    font-family: 'Font Awesome 5 Free'; /* Ensure you have included FontAwesome in your project */
+    font-weight: 900; /* FontAwesome solid weight */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust the size as needed */
+    color: white; /* Adjust the color as needed */
+}
+
+.c_div_bg_category_blogs{
+    background: linear-gradient(to left, #F857A6, #FF5858);
+    border-radius: 15px;
+    height: 120px;
+    position: relative;
+}
+
+.c_div_bg_category_blogs::after {
+    content: "\f303"; /* Unicode for the pencil icon in FontAwesome */
+    font-family: 'Font Awesome 5 Free'; /* Ensure you have included FontAwesome in your project */
+    font-weight: 900; /* FontAwesome solid weight */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust the size as needed */
+    color: white; /* Adjust the color as needed */
+}
+
+.c_div_bg_category_new_arrivals:hover,
+.c_div_bg_category_sale:hover,
+.c_div_bg_category_clearance:hover,
+.c_div_bg_category_gifts:hover,
+.c_div_bg_category_blogs:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s linear;
+    cursor: pointer;
+}
+
+
+/* Product */
+
+.c_title_item_product_new_arrival{
+    color: #212121;
+    font-weight: 400;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 0.8rem;
+    height: 70px;
+    text-align: center;
+}
+
+.c_button_item_product_new_arrival{
+    background-color: #F65900;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.c_button_item_product_new_arrival:hover{
+    background-color: #F17228;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.c_button_item_product_stock_new_arrival{
+    font-size: 0.9rem;
+    color: #1C8345;
+    font-family: 'Pontano Sans',sans-serif;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+.c_button_item_product_price_new_arrival{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #212121;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+}
+
+.c_button_item_product_saving_new_arrival{
+    font-size: 0.8rem;
+    color: #746F72;
+    font-family: 'Open Sans',sans-serif;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.c_div_price_saving_new_arrival{
+    text-align: center;
+    /* background-color: #006400; */
+    height: 50px;
+}
+
+.c_div_product_new_arrival_item{
+    border-radius: 15px;
+    border: 1px solid #E2E2E2;
+}
+
+.c_div_product_new_arrival_item img{
+    border-radius: 15px;
+}
+
+.c_div_product_new_arrival_item:hover{
+
+    background-color: #F5F5F5;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* End Product */
+
+
+/* Footer div */
+
+.c_footer_div{
+    background-color: #f5f5f5;
+    color: #FFFFFF;
+    padding: 1rem;
+    font-family: 'Open Sans',sans-serif;
+}
+
+
+
+.c_icon_sosmed{
+    color: #777777;
+    padding: 12px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+
+.c_reserved{
+    border-top: 0.5px solid #E2E2E2;
+    padding-top: 30px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.c_footer_dic_second{
+    font-family: 'Pontano Sans',sans-serif;
+    font-size: 14px;
+}
+
+.c_input_subscribe{
+    border-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0.5rem;
+    font-family: 'Pontano Sans',sans-serif;
+    color: #666666;
+    outline: none;
+}
+
+.c_input_subscribe:focus{
+    border-color: #F65900;
+}
+
+.c_button_subscribe{
+    background-color: #F65900;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0.5rem;
+    font-family: 'Pontano Sans',sans-serif;
+}
+
+/* End footer */
+
+
+.c_subfooter{
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    color: #1C1C1C;
+}
+
+
+
+/* Image Brands */
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    /* flex: 0 0 calc(100% / 8);  */
+    /* Membagi setiap gambar untuk 1/8 dari lebar slider */
+}
+
+.slider-item img {
+    /* width: 100%; */
+    /* display: block; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.slider-prev,
+.slider-next {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px; */
+    cursor: pointer;
+}
+
+.slider-prev {
+    /* left: 10px; */
+}
+
+.slider-next {
+    /* right: 10px; */
+}
+
+.c_div_slider_item img{
+    border-radius: 15px;
+    border: 1px solid #E2E2E2;
+    /* width: 100px; */
+}
+
+.c_button_slider_prev{
+    background-color: #ececec; padding: 0.2rem; padding-left: 0.3rem; border-radius: 4px; margin-right: 3px; margin-left: 10px;
+}
+
+.c_button_slider_next{
+    background-color: #ececec; padding: 0.2rem; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 4px;
+}
+
+.c_button_slider_next:hover,
+.c_button_slider_prev:hover{
+    background-color: #F65900;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+/* End Image Brands */
