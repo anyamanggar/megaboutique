@@ -29,7 +29,11 @@ body{
     border-radius: 0.5rem;
 }
 
-.c_header_input_search:focus{
+.c_header_input_search_responsive{
+    border-radius: 0.5rem;
+}
+
+.c_header_input_search_responsive:focus{
     border-color: #F65900;
 }
 
@@ -199,6 +203,35 @@ body{
 #suggestion-list li:hover {
     background-color: #f3f4f6;
 }
+
+
+#suggestion-box-responsive {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+#suggestion-list-responsive li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    padding-left: 10px !important;
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 0.7rem;
+}
+
+#suggestion-list-responisve li:hover {
+    background-color: #f3f4f6;
+}
+
 
 .suggestion-icon {
     margin-right: 0.9rem;
